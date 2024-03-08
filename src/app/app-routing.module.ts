@@ -7,6 +7,10 @@ import { authResolver } from 'src/resolvers/auth.resolve';
 const routes: Routes = [
   {
    path: '', component: AppComponent,
+   data: {
+    Id: 1,
+    accessLevel: ["read", "complete"]
+   },
    canActivate: [multipleGuards([guard1, guard2, guard3, guard4])],
    resolve: {
     auth: authResolver

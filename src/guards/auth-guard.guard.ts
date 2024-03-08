@@ -23,8 +23,10 @@ export const guard1 = async () => {
     return true;
 }
 
-export const guard2 = () => {
-    console.log('guard 2')
+export const guard2 = (route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot) => {
+
+    console.log('guard 2', route.data);
     return true;
 }
 

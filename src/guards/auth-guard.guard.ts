@@ -19,11 +19,23 @@ export const guard1 = async () => {
     console.log('guard 1')
     const resultOfFoo = await new Promise(resolve => setTimeout(() => resolve(true), 5000));
 
-    console.log("6", resultOfFoo)
+    console.log("guard 1", resultOfFoo)
     return true;
 }
 
 export const guard2 = () => {
     console.log('guard 2')
+    return true;
+}
+
+export const guard3 = async () => {
+    const resultOfFoo = await new Promise(resolve => setTimeout(() => resolve(true), 5000));
+
+    console.log("guard 3", resultOfFoo)
+    return true;
+}
+
+export const guard4 =  () => {
+    console.log("guard 4")
     return true;
 }
